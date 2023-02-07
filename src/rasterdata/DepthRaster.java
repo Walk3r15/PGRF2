@@ -8,6 +8,7 @@ public class DepthRaster implements Raster<Double>{
 
     public DepthRaster(int width, int height) {
         array = new double[width][height];
+        clear();
     }
 
     @Override
