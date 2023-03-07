@@ -42,11 +42,14 @@ public class ColorRaster implements Raster<Col>{
         }
         return Optional.empty();
     }
-
     @Override
     public void clear() {
         Graphics g = image.getGraphics();
         g.setColor(new Color(background.getRGB()));
         g.fillRect(0, 0, getWidth(), getHeight());
+    }
+
+    public void present(Graphics g) {
+        g.drawImage(image, 0, 0, null);
     }
 }
